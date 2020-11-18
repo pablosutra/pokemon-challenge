@@ -1,5 +1,9 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .pokemon-information-container{
-    &-no-selection{
+
+    &-no-selection, &-error{
         display: flex;
         align-items: center;
         margin: 55px;
@@ -10,6 +14,104 @@
             font-weight: bold;
             font-size: 36px;
             color: #000;
+        }
+        &-error-text{
+            font-weight: bold;
+            font-size: 36px;
+            color: #F00;
+        }
+    }
+}
+.pokemon-detail{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-id{
+        &-thumb{
+            background: #eee;
+            @include border-radius(7px);
+            img{
+                vertical-align: middle;
+                margin: auto;
+            }
+        }
+        &-name{
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+        &-number{
+            text-align: center;
+            margin-top: 5px;
+            color: #6c6a6a;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+        &-types{
+            display: flex;
+            justify-content: space-evenly;
+             @each $type, $color in $pokemon-type-colors {
+            &-#{$type}{
+                margin-top: 10px;
+                width: 30%;
+                padding: 10px 20px;
+                background-color: $color;
+                color: #FFF;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                }
+            }
+        }
+    }
+    &-stats{
+        border: 1px solid #ddd;
+        @include border-radius(7px);
+        width: 30%;
+        margin-left: 25%;
+        overflow-y: auto;
+        &-title{
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        &-item{
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 20px;
+            .tag{
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    &-moves{
+        border: 1px solid #ddd;
+        @include border-radius(7px);
+        overflow-y: auto;
+        width: 100%;
+        margin-top: 100px;
+        &-title{
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        &-items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &-item{
+                margin: 10px 20px;
+            }
         }
     }
 }

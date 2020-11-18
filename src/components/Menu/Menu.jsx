@@ -27,13 +27,12 @@ export const Menu = () => {
     return (
     <OffCanvas 
     isOpen
-    mainContainerSelector="#page-wrap"
     lockBodyAfterOpen={false}
     style={burgerStyles}
     >
         <div className="burger-menu-title">
             <img src={pokeBall}  alt="Poke Ball" className="burger-menu-title-logo"/>
-            <p className="burger-menu-title-description">Pokedex</p>
+            <p className="burger-menu-title-description">Pokédex</p>
         </div>
         <div className="burger-menu-list">
             {pokemonList.length && 

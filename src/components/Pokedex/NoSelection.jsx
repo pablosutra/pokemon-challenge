@@ -4,7 +4,7 @@ export const NoSelection = () => (
     <div className="pokemon-information-container-no-selection">
         <img src={pokeball} alt="pokeball" className="pokemon-information-container-no-selection-logo" />
         <p className="pokemon-information-container-no-selection-text">
-            Hi!, Please select a pokemon from the left list to get more information.
+           CHOOSE A POKEMON
         </p>
     </div>
 )

@@ -5,13 +5,13 @@ import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 import { createBrowserHistory } from 'history'
 import {Menu} from './components/Menu'
 import {Pokedex} from './components/Pokedex'
-import './styles.scss'
+import './styles/styles.scss'
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-        <div id="app-container">
+        <div className="app-container">
     <BrowserRouter history={history}>
       <Menu />
       <Switch>
