@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import {Router, Route, Switch, Redirect} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory'
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import { createBrowserHistory } from 'history'
 import {Menu} from './components/Menu'
 import {Pokedex} from './components/Pokedex'
 import './styles.scss'
@@ -11,8 +11,8 @@ const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
-    <div id="app-container">
+        <div id="app-container">
+    <BrowserRouter history={history}>
       <Menu />
       <Switch>
       <Route exact path="/pokedex" component={Pokedex} />
@@ -21,8 +21,8 @@ ReactDOM.render(
           <Redirect to="/pokedex"/>
         </Route>
       </Switch>
-      </div>
-    </Router>
+    </BrowserRouter>
+    </div>
 
   </React.StrictMode>,
   document.getElementById('root')

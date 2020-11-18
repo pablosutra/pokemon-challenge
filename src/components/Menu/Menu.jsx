@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import OffCanvas from 'react-aria-offcanvas'
 import './Menu.scss'
 import pokeBall from '../../assets/pokeBall.png'
@@ -19,8 +19,6 @@ const burgerStyles = {
 
 export const Menu = () => {
     const [pokemonList, setPokemonList] = useState([]);
-    const params = useParams();
-    console.log(params)
     useEffect(()=> {
         axios.get(`${BASE_API_URL}${ENDPOINTS.list}`)
         .then((response)=>setPokemonList(response.data.results))

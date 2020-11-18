@@ -1,0 +1,15 @@
+.pokemon-information-container{
+    &-no-selection{
+        display: flex;
+        align-items: center;
+        margin: 55px;
+        &-logo{
+            width: 10%;
+        }
+        &-text{
+            font-weight: bold;
+            font-size: 36px;
+            color: #000;
+        }
+    }
+}
