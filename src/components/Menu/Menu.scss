@@ -1,0 +1,40 @@
+.burger-menu{
+    &-list{
+        background: #565251;
+        padding: 20px;
+        &-item{
+            color: #FFF;
+            display: flex;
+            font-weight: bold;
+           &-number{
+                color: #6c6a6a;
+                font-size: 18px;
+            }
+            &-name{
+                margin-left: 20px;
+                color: #FFF;
+                text-transform: uppercase;
+                &:hover{
+                    color: #34302f;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &-title{
+        background:#34302f;
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+        &-logo{
+            width: 25%;
+        }
+        &-description{
+            margin-left: 15px;
+            font-size: 25px;
+        }
+    }
+}
