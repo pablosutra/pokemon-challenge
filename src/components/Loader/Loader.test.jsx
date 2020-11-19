@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import {Loader} from './Loader';
+import { Loader } from './Loader';
 
-describe('<Loader />', ()=> {
-    test('renders properly', () => {
-        render(<Loader />);
-        expect(screen).toMatchSnapshot()
-    });
-})
+describe('<Loader />', () => {
+  test('renders properly', () => {
+    render(<Loader />);
+    expect(screen).toMatchSnapshot();
+  });
+});

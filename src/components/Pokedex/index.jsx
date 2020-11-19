@@ -1,1 +1,1 @@
-export * from './Pokedex'
+export * from './Pokedex';
