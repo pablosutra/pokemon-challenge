@@ -1,3 +1,13 @@
+.menu-button{
+    background: none;
+    border: 0;
+    .fa{
+        position: absolute;
+        left: 15px;
+        color: #000;
+        z-index: 9999999;
+    }
+}
 .burger-menu{
     &-list{
         background: #565251;
@@ -14,6 +24,10 @@
                 margin-left: 20px;
                 color: #FFF;
                 text-transform: uppercase;
+                background: none;
+                border: 0;
+                font-size: 14px;
+                font-weight: bold;
                 &:hover{
                     color: #34302f;
                     text-decoration: underline;
@@ -35,6 +49,13 @@
         &-description{
             margin-left: 15px;
             font-size: 25px;
+        }
+        .menu-button{
+            .fa{
+                color: #FFF;
+                position: static;
+                margin-right: 10px;
+            }
         }
     }
 }

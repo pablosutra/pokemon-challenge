@@ -25,7 +25,7 @@ export const Pokemon = ({pokemon}) => (
       pokemon.stats.map(({stat, base_stat}) =>{
         const statName = _capitalize(_replace(stat.name,'-',' '));
         return (
-        <div className="pokemon-detail-stats-item">
+        <div className="pokemon-detail-stats-item" key={stat.name}>
             {statName}
             <span className="tag">{base_stat}</span>
         </div>
@@ -40,7 +40,7 @@ export const Pokemon = ({pokemon}) => (
               pokemon.moves.map(({move}) =>{
                 const statName = _capitalize(_replace(move.name,'-',' '));
                 return (
-                <div className="pokemon-detail-moves-items-item">
+                <div className="pokemon-detail-moves-items-item" key={move.name}>
                     {statName}
                 </div>
               )})

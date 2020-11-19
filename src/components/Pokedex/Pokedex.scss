@@ -55,6 +55,9 @@
         &-types{
             display: flex;
             justify-content: space-evenly;
+            @media (max-width: 768px){
+                flex-direction: column;
+            }
              @each $type, $color in $pokemon-type-colors {
             &-#{$type}{
                 margin-top: 10px;
@@ -65,8 +68,19 @@
                 text-align: center;
                 text-transform: uppercase;
                 font-weight: bold;
+                @media (max-width: 768px){
+                    width: 100%;
+                }
                 }
             }
+        }
+        @media (max-width: 768px){
+            width: 75%;
+            margin-top: 20px;
+        }
+        @media (max-width: 540px){
+            width: 75%;
+            margin: 20px auto;
         }
     }
     &-stats{
@@ -91,6 +105,14 @@
                 margin-left: 10px;
             }
         }
+        @media (max-width: 768px){
+            width: 75%;
+            margin-top: 20px;
+        }
+        @media (max-width: 540px){
+            width: 75%;
+            margin: 20px auto;
+        }
     }
     &-moves{
         border: 1px solid #ddd;
@@ -112,6 +134,14 @@
             &-item{
                 margin: 10px 20px;
             }
+        }
+        @media (max-width: 768px){
+            width: 75%;
+            margin: 20px;
+        }
+        @media (max-width: 540px){
+            width: 75%;
+            margin: 20px auto;
         }
     }
 }
